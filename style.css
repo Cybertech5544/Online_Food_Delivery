@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+HR:wght@100..400&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    /* transition: 5s ease-in-out; */
+}
+
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    height: auto;
+    /* background: rgb(110 133 138); */
+    background: rgb(214, 221, 221);
+    z-index: -3;
+}
+
+.container1 {
+    overflow: hidden;
+    width: 100%;
+    height: 130vh;
+    /* background: red; */
+    position: relative;
+}
+
+.container1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background: url(homebg.jpg) no-repeat center center;
+    background-size: cover;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* opacity: 0.5; */
+    /* filter: blur(2px); */
+    z-index: -3;
+}
+
+.container1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    /* background: url(homebg.jpg) no-repeat center center ;
+    background-size: cover; */
+    background: radial-gradient(#e6646400, #000000);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* opacity: 0.5;     */
+    /* filter: blur(2px); */
+    z-index: -2;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: auto;
+    /* background: transparent; */
+    /* background: rebeccapurple; */
+    display: flex;
+    justify-content: space-between;
+    /* padding: 10px 50px; */
+    align-items: center;
+    background: rgba(65, 65, 65, 0.466);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+
+}
+
+header img {
+    width: 100px;
+}
+
+header nav {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    /* color: rgb(0, 0, 0); */
+    color: rgb(255, 145, 0);
+    font-weight: bolder;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo span {
+    font-family: "Playwrite HR";
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-transform: capitalize;
+    color: #ffbb00;
+
+}
+
+.container1 .main {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+
+}
+
+.wave-container {
+    /* height: 40vh; */
+    /* background-color: rgba(32, 178, 170, 0); */
+    /* position: relative; */
+}
+
+.wave-container::before {
+    content: "";
+    width: 100%;
+    height: 168px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: auto;
+    background-repeat: repeat no-repeat;
+    background-position: 6vw bottom;
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1200 119' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M0 0C22.4434 -1 28.9842 2 55 21C94.1849 48 121.997 51 158.5 51C198.5 53 200 39 240 46C280 53 320 79 360 79C400 79 440 53 480 48C520 44 560 61 600 75C640 88 680 97 720 101C760 106 800 106 840 92C880 79 920 53 960 55C1000 57 1040 88 1080 83C1120 79 1127.5 53 1147.5 33C1171.48 10 1185.65 0 1200 0V119H1180C1160 119 1120 119 1080 119C1040 119 1000 119 960 119C920 119 880 119 840 119C800 119 760 119 720 119C680 119 640 119 600 119C560 119 520 119 480 119C440 119 400 119 360 119C320 119 280 119 240 119C200 119 160 119 120 119C80 119 40 119 20 119H0V0.0103865Z' fill='%23d6dddd'/></svg>");
+}
+
+@media(max-width:850px) {
+    .wave-container::before {
+        height: 84px
+    }
+}
+
+.container1 .main .animation {
+    /* background: red; */
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: delivery 2s ease-in-out;
+    /* transition: all 2s ; */
+    /* margin-bottom: 500px; */
+    /* overflow: hidden; */
+
+}
+
+.container1 .main .animation h1 {
+    /* background: rgb(235, 34, 34); */
+    backdrop-filter: blur(10px);
+    border: none;
+    color: rgb(255, 145, 0);
+}
+
+.container1 .main .animation img {
+    width: 100px;
+}
+
+@keyframes delivery {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+
+    }
+}
+
+.container1 .main .poster {
+    border: none;
+    margin-bottom: 300px;
+    backdrop-filter: blur(10px);
+    width: 800px;
+    line-height: 2;
+    text-align: center;
+    font-size: larger;
+    animation: up 3s ease-in-out;
+
+}
+
+@keyframes up {
+    0% {
+        transform: translateY(800%);
+    }
+
+    100% {
+        transform: translateY(0%);
+
+    }
+}
+
+.topfood {
+    width: 100%;
+    height: auto;
+    background: rgb(214, 221, 221);
+    /* background: whitesmoke; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+    gap: 10px;
+    padding-bottom: 50px;
+}
+
+.topfood h1,
+h2 {
+    color: rgb(255, 145, 0);
+    text-transform: capitalize;
+
+}
+
+.topfood .items {
+    gap: 50px;
+    width: auto;
+    height: auto;
+    /* background: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.topfood .items .food img {
+    width: 200px;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgb(0, 0, 0));
+
+}
+
+.topfood .items .food1 {
+    gap: 50px;
+    display: flex;
+    /* background: red; */
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.topfood .items .food {
+    /* background: rgba(222, 226, 226, 0.87); */
+    box-shadow: rgba(136, 174, 191, 0.48) 10px 5px 20px 0px, rgba(255, 255, 255, 0.8) -10px -5px 20px 0px;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topfood .items .food:hover {
+    box-shadow: rgba(136, 174, 191, 0.48) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+@media screen and (max-width=1570px) {
+    .topfood {
+        height: auto;
+    }
+}
+
+
+.femous {
+    background: rgb(238, 238, 238);
+    /* position: absolute; */
+}
+
+.femous .items .food {
+    position: relative;
+    overflow: hidden;
+    width: 500px;
+    height: 600px;
+}
+
+.femous .items .food img {
+    position: absolute;
+    top: 0;
+    width: 500px;
+    height: 350px;
+    filter: none;
+
+}
+
+.landingposter{
+    width: 100%;
+    height: 80vh;
+    background: url(https://marketplace.foodotawp.com/wp-content/uploads/2021/05/promo-11.png) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    float: left;
+    padding: 0 900px 0 100px;
+
+    background-attachment: fixed;
+}
